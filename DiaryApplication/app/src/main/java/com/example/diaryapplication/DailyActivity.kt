@@ -17,6 +17,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 import kotlinx.android.synthetic.main.activity_daily.*
 import kotlinx.android.synthetic.main.content_daily.*
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.tasks.await
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -42,8 +44,9 @@ class DailyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         todayString = dateFormat.format(today)
 
 
-        getDetail = database.collection(CollectionName.MY_DIARY.name).document(todayString).get().result?.get("detail").toString()
-
+        getDetail = runBlocking {
+            database.collection(CollectionName.MY_DIARY.name).document(todayString).get().await().get("detail").toString()
+        }
 
         upDate()
        }

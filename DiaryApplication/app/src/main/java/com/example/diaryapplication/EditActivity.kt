@@ -63,7 +63,7 @@ class EditActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-           R.id.menu_delete -> insertPhotos()
+           R.id.menu_delete -> deleteData()
            R.id.menu_done -> saveDiary()
 
         }
@@ -120,8 +120,8 @@ class EditActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         FirebaseAuth.getInstance().signOut();
     }
 
-    private fun insertPhotos() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    private fun deleteData() {
+        //Todo deleteData処理
     }
 
     companion object{

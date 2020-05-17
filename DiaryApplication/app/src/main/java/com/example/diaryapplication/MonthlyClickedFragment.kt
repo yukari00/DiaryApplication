@@ -10,8 +10,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_monthly_clicked.*
-import kotlinx.coroutines.experimental.tasks.await
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.tasks.await
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,9 +55,12 @@ class MonthlyClickedFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         getDetail = runBlocking {
+
             database.collection(CollectionName.MY_DIARY.name)
                 .document(date).get().await().get("detail").toString()
+
         }
+
 
         textViewDateMonthlyClicked.text = date
 
