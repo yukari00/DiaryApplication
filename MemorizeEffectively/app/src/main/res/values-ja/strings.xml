@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">わたしの単語帳</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_edit">編集</string>
+    <string name="title_activity_list">リスト</string>
+
+
+
+    <!--MainActivity-->
+    <string name="go_to_next">リストへ</string>
+
+    <!--ListActivity-->
+    <!--EditActivity-->
+    <string name="definition">意味</string>
+    <string name="a_word">単語</string>
+    <string name="memorized">暗記済み</string>
+    <string name="save_titile_alert">登録</string>
+    <string name="save_message_alert">登録してもよろしいですか</string>
+    <string name="alert_dialog_cancel">キャンセル</string>
+    <string name="edit_title_alert">修正</string>
+    <string name="edit_message_alert">修正してもよろしいですか</string>
+
+    <!--AlarmFragment-->
+    <string name="alarm">Alarm Setting</string>
+
+</resources>
