@@ -57,17 +57,22 @@ class EditActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             findItem(R.id.menu_delete).isVisible = true
             findItem(R.id.menu_edit).isVisible = false
             findItem(R.id.menu_done).isVisible = true
+            findItem(R.id.menu_photo).isVisible = true
         }
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-           R.id.menu_delete -> deleteData()
-           R.id.menu_done -> saveDiary()
-
+            R.id.menu_delete -> deleteData()
+            R.id.menu_done -> saveDiary()
+            R.id.menu_photo -> insertPhoto()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun insertPhoto() {
+
     }
 
     private fun saveDiary() {

@@ -74,9 +74,10 @@ class DailyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         inflater.inflate(R.menu.menu_main, menu)
 
         menu!!.apply {
-               findItem(R.id.menu_delete).isVisible = true
-               findItem(R.id.menu_edit).isVisible = true
-               findItem(R.id.menu_done).isVisible = false
+            findItem(R.id.menu_delete).isVisible = true
+            findItem(R.id.menu_edit).isVisible = true
+            findItem(R.id.menu_done).isVisible = false
+            findItem(R.id.menu_photo).isVisible = false
            }
            return true
        }

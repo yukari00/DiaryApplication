@@ -17,4 +17,9 @@
         android:icon="@drawable/ic_done_24dp"
         android:title="Complete"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_photo"
+        android:icon="@drawable/ic_insert_photo_24dp"
+        android:title="Picture"
+        app:showAsAction="ifRoom" />
 </menu>

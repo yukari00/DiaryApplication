@@ -58,6 +58,7 @@ class MonthlyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             findItem(R.id.menu_delete).isVisible = false
             findItem(R.id.menu_edit).isVisible = false
             findItem(R.id.menu_done).isVisible = false
+            findItem(R.id.menu_photo).isVisible = false
         }
         return true
     }
