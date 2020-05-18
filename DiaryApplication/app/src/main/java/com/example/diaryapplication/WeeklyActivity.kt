@@ -67,7 +67,7 @@ class WeeklyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         menu!!.apply {
             findItem(R.id.menu_delete).isVisible = false
-            findItem(R.id.menu_edit).isVisible = false
+            findItem(R.id.menu_edit).isVisible = true
             findItem(R.id.menu_done).isVisible = false
         }
         return true
