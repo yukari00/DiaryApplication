@@ -3,6 +3,7 @@ package com.example.diaryapplication
 import android.content.Intent
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -58,6 +59,20 @@ class WeeklyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+
+        menu!!.apply {
+            findItem(R.id.menu_delete).isVisible = false
+            findItem(R.id.menu_edit).isVisible = false
+            findItem(R.id.menu_done).isVisible = false
+        }
+        return true
+    }
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){

@@ -41,13 +41,11 @@ class DailyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         val calendar = Calendar.getInstance()
         val today = calendar.time
         val dateFormat = SimpleDateFormat("yyyy年MM月dd日")
+
         todayString = dateFormat.format(today)
-
-
         getDetail = runBlocking {
             database.collection(CollectionName.MY_DIARY.name).document(todayString).get().await().get("detail").toString()
         }
-
         upDate()
        }
 
@@ -71,14 +69,16 @@ class DailyActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
        }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-           val inflater = menuInflater
-           inflater.inflate(R.menu.menu_main, menu)
-           menu!!.apply {
+
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+
+        menu!!.apply {
                findItem(R.id.menu_delete).isVisible = true
                findItem(R.id.menu_edit).isVisible = true
                findItem(R.id.menu_done).isVisible = false
            }
-           return super.onCreateOptionsMenu(menu)
+           return true
        }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -58,7 +58,7 @@ class EditActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             findItem(R.id.menu_edit).isVisible = false
             findItem(R.id.menu_done).isVisible = true
         }
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
